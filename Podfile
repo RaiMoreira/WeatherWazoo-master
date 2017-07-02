@@ -1,11 +1,11 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target 'SwiftWeather' do
+target 'WeatherWazoo' do
     pod 'SwiftyJSON'
 end
 
-target 'SwiftWeatherTests' do
+target 'WeatherWazooTests' do
     pod 'Quick'
     pod 'Nimble'
 end
