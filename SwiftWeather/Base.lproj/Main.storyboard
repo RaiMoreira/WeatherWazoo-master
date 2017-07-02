@@ -145,11 +145,11 @@
                                             <constraint firstItem="rzR-3u-MJe" firstAttribute="height" secondItem="WCS-fc-TZZ" secondAttribute="height" id="un6-gc-Ir3"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eso-ce-CTU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eso-ce-CTU">
                                         <rect key="frame" x="166" y="383" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -212,6 +212,7 @@
                     <connections>
                         <outlet property="iconLabel" destination="hId-DS-ttH" id="LPc-4x-ucb"/>
                         <outlet property="locationLabel" destination="COR-kZ-hOu" id="ksQ-LM-5Vo"/>
+                        <outlet property="messageLabel" destination="eso-ce-CTU" id="oOH-vE-ukK"/>
                         <outlet property="temperatureLabel" destination="lFc-pa-Aur" id="3ka-Ce-vTD"/>
                         <outletCollection property="forecastViews" destination="y4d-hQ-IEP" collectionClass="NSMutableArray" id="lX3-ak-UIi"/>
                         <outletCollection property="forecastViews" destination="X03-jw-bPo" collectionClass="NSMutableArray" id="4an-ne-Yc5"/>
