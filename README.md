@@ -1,9 +1,10 @@
 ## WeatherWazoo
-__ WeatherWazoo is a simplistic iOS weather application which sends personalized notifications to the user based on weather conditions.
+WeatherWazoo is a simplistic iOS weather application which sends personalized notifications to the user based on weather conditions.
 
 ### Alpha Version
 
 **** Features
+
 -Uses iOS location services to get current coordinates of user
 -Uses the coordinates to query the OpenWeatherMap API to acquire weather information
 -Uses SwiftyJSON to parse the data given and retrieve only the useful information.
