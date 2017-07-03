@@ -5,11 +5,11 @@ WeatherWazoo is a simplistic iOS weather application which sends personalized no
 
 **** Features
 
--Uses iOS location services to get current coordinates of user
--Uses the coordinates to query the OpenWeatherMap API to acquire weather information
--Uses SwiftyJSON to parse the data given and retrieve only the useful information.
--Displays a personalized message to the user based on case of current weather description.
--Displays the forecast for the next 12 hours of the day in 3 hour intervals.
+Uses iOS location services to get current coordinates of user
+Uses the coordinates to query the OpenWeatherMap API to acquire weather information
+Uses SwiftyJSON to parse the data given and retrieve only the useful information.
+Displays a personalized message to the user based on case of current weather description.
+Displays the forecast for the next 12 hours of the day in 3 hour intervals.
 
 
 ![](https://github.com/RaiMoreira/WeatherWazoo-master/blob/master/Screenshots/Simulator%20Screen%20Shot%20Jul%203%2C%202017%2C%2012.35.44%20AM.png)
