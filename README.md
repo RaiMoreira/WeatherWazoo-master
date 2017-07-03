@@ -3,7 +3,7 @@ WeatherWazoo is a simplistic iOS weather application which sends personalized no
 
 ### Alpha Version
 
-**Features
+**Features**
 
 - Uses iOS location services to get current coordinates of user
 - Uses the coordinates to query the OpenWeatherMap API to acquire weather information
@@ -18,10 +18,10 @@ WeatherWazoo is a simplistic iOS weather application which sends personalized no
 
 ### Beta Version
 I am currently working on the next version.
-**TODO:
--send notifications on the lockscreen for users based on the forecast of the  next 12 hours of the day. Only sends notifications for important events eg."It is going rain at around 2PM don't forget your umbrella.
--add an icon for the app.
--styling the user interface: fonts, 
+*TODO*
+- send notifications on the lockscreen for users based on the forecast of the  next 12 hours of the day. Only sends notifications for important events eg."It is going rain at around 2PM don't forget your umbrella.
+- add an icon for the app.
+- styling the user interface: fonts, 
 
 
 ### Release Candidate
