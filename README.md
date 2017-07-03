@@ -9,8 +9,8 @@
 -Uses SwiftyJSON to parse the data given and retrieve only the useful information.
 -Displays a personalized message to the user based on case of current weather description.
 
+![Alt text](https://github.com/RaiMoreira/WeatherWazoo-master/blob/master/Screenshots/Simulator%20Screen%20Shot%20Jul%203%2C%202017%2C%2012.18.19%20AM.png)
 
-![]({{site.baseurl}}//Simulator%20Screen%20Shot%20Jul%203%2C%202017%2C%2012.18.19%20AM.png)
 ### Beta Version
 I am currently working on the next version.
 TODO:
