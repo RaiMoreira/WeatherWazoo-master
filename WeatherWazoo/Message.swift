@@ -1,4 +1,8 @@
-
+/*These personalized notifications are based on the current weather ID code form the API website
+ https://openweathermap.org/weather-conditions
+ 
+ 
+ */
 
 import Foundation
 
@@ -9,16 +13,21 @@ struct Message {
     init(condition: Int){
    
     switch condition {
-    case 200..<232: messageText = "shit its thunderstoming"
-    case 300..<321: messageText = "its just drizzling"
-    case 500..<531: messageText =  "its raining grab an umbrella "
-    case 600..<622: messageText =  "get your snowboots ready"
-    case 701..<781: messageText =  "atmosphere"
-    case 800: messageText = "clear skiesss"
-    case 801..<804: messageText =  "its just cloudy"
-    case 900..<906: messageText =  "extreme weather"
-    case 951..<962: messageText = "other weather"
-    default: messageText = "default message"
+    case 200..<232: messageText = "Be safe out there! ⛈" //all types of thunderstorms
+    case 300..<321: messageText = "No worries its just a lil drizzle 🌧" //all types of drizzle
+    case 500..<531: messageText =  "Don't forget your umbrella ☔️" //all types of rain
+    case 600..<622: messageText =  "Get your snowboots ready" //all types of snow conditions
+    case 701..<781: messageText =  "Be safe if you are driving 🌫" //mist,smoke,fog,haze...
+    case 800: messageText = "Nothing beats a clear sky ☀️" //clear sky
+    case 801..<804: messageText =  "Look on the bright side atleast its not raining ☁️" //clouds
+    case 900..<902: messageText =  "Yo its crazy out there 🌪" //tornados,tropical storm, hurricane
+    case 903: messageText = "Grab some gloves, a scarf, idk what to tell you but its COLD 💀"
+    case 904: messageText = "Get yourself some shades maybe a frozen margarita cuz its HOT AS HELL 🔥"
+    case 905: messageText = "Grab your sh*t before the wind blows it 💨"
+    case 906: messageText = "Oh great now we got chunks of ice falling from the sky 🙄" //hail
+    case 951..<957: messageText =  "Oh so breezzayyy 💨" //tornados,tropical storm, hurricane
+    case 960..<962: messageText =  "Yo its crazyyy out there 🌪" //storm,violent storm, hurricane
+    default: messageText = "Im not working right now be back later 😌"
                     }
     }
 }
