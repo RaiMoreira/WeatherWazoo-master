@@ -10,5 +10,5 @@ struct Weather {
   let forecasts: [Forecast]
     
   let message : String //custom message
-  let description : String //light rain 
+  let description : String //light 
 }
