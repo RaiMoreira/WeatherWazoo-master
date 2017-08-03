@@ -7,8 +7,11 @@
 import UIKit
 import CoreSpotlight
 import MobileCoreServices
+import UserNotifications
+import UserNotificationsUI
 
 //MARK: - UIViewController Properties
+@available(iOS 10.0, *)
 class WeatherViewController: UIViewController {
 
   //MARK: - IBOutlets
@@ -17,7 +20,8 @@ class WeatherViewController: UIViewController {
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet var forecastViews: [ForecastView]!
   @IBOutlet weak var messageLabel: UILabel!
-    
+  @IBOutlet weak var descriptionLabel: UILabel!
+    //add description label
   let identifier = "WeatherIdentifier"
   
     //MARK: - Super Methods
@@ -110,7 +114,12 @@ class WeatherViewController: UIViewController {
             [unowned self] in
             self.messageLabel.text = $0
         }
-    
+        
+        viewModel?.description.observe {
+            [unowned self] in
+            self.descriptionLabel.text = $0
+        }
+        
      viewModel?.forecasts.observe {  //sets forecast
         [unowned self] (forecastViewModels) in
         if forecastViewModels.count >= 4 {
@@ -118,6 +127,26 @@ class WeatherViewController: UIViewController {
                 forecastView.loadViewModel(forecastViewModels[index])
             }
             }
+ //edit noticiation
+        
+        let notification = UNMutableNotificationContent()
+        notification.title = "Wake up smell the coffee! ☕️"
+        notification.body = "Current " + self.descriptionLabel.text! + " and "  + self.temperatureLabel.text! + ". " + self.messageLabel.text!
+        notification.sound = UNNotificationSound.default()
+/*create a timer for notification 5 seconds must be in background
+        var dateInfo = DateComponents()
+        dateInfo.hour = 7
+        dateInfo.minute = 0
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false) */
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+/*create request object to send to ios asking for our notification to be registered and ready for use */
+        let request = UNNotificationRequest(identifier: "MorningAlarm", content: notification, trigger: trigger)
+/*send our request to ios*/
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    
+        
         }
       }
     }

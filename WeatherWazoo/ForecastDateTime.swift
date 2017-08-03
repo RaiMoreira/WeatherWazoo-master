@@ -10,7 +10,9 @@ struct ForecastDateTime {
 
   var shortTime: String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "HH:mm"
+    dateFormatter.dateFormat = "h a"
+    dateFormatter.amSymbol = "AM"
+    dateFormatter.pmSymbol = "PM"
     let date = Date(timeIntervalSince1970: rawDate)
     return dateFormatter.string(from: date)
   }

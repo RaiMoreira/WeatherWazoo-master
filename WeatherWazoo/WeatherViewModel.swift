@@ -18,6 +18,8 @@ class WeatherViewModel {
   let forecasts: Observable<[ForecastViewModel]>
 
   let message: Observable<String>
+  let description: Observable<String>
+
   
   // MARK: - Services
   fileprivate var locationService: LocationService
@@ -35,6 +37,8 @@ class WeatherViewModel {
     forecasts = Observable([])
     
     message = Observable(emptyString)
+    
+    description = Observable(emptyString)
 
     // Can put Dependency Injection here
     locationService = LocationService()
@@ -57,6 +61,7 @@ class WeatherViewModel {
       temperature.value = weather.temperature
     
       message.value = weather.message
+      description.value = weather.description
 
       let tempForecasts = weather.forecasts.map { forecast in
         return ForecastViewModel(forecast)
@@ -82,8 +87,9 @@ class WeatherViewModel {
       iconText.value = emptyString
       temperature.value = emptyString
       self.forecasts.value = []
-    
-    message.value = emptyString
+    //edit
+      message.value = emptyString
+      description.value = emptyString
   }
 }
 
