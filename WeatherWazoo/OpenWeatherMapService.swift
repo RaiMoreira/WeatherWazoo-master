@@ -27,15 +27,16 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
       let weatherIcon = WeatherIcon(condition: forecastCondition, iconString: forecastIcon)
       let forcastIconText = weatherIcon.iconText
       let forecastDesc = forecastDescription
-
+      let forecastId = String(forecastCondition)
+        
       let forecast = Forecast(time: forecastTimeString,
                           iconText: forcastIconText,
                        temperature: forecastTemperature.degrees,
-                       description: forecastDesc                             )
+                       description: forecastDesc,
+                       id: forecastId)
 
       forecasts.append(forecast)
     }
-
     return forecasts
   }
 /*this function retrieves the weather information live */
@@ -90,18 +91,18 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
       weatherBuilder.temperature = temperature.degrees
       weatherBuilder.location = city
       weatherBuilder.description = description  //description light raint
-      print(description)
       let weatherIcon = WeatherIcon(condition: weatherCondition, iconString: iconString)
       weatherBuilder.iconText = weatherIcon.iconText
 
             //edit
-     print(weatherCondition)
+     //print(weatherBuilder)
      let customMessage = Message(condition: weatherCondition)  //sends id to return custom message
      weatherBuilder.message = customMessage.messageText  //custom message
             
             
 
       weatherBuilder.forecasts = self.getFirstFourForecasts(json)
+      weatherBuilder.message = Helper(data: weatherBuilder)
 
       completionHandler(weatherBuilder.build(), nil)
     })

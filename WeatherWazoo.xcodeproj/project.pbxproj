@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00CAA3E1D00E0C90D48FF95D /* Pods_WeatherWazooTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206D13C35A6180A5B8299E87 /* Pods_WeatherWazooTests.framework */; };
-		715E62B71F32D27C005895B0 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E62B61F32D27C005895B0 /* Notification.swift */; };
 		715E62BB1F32EFF8005895B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E62BA1F32EFF8005895B0 /* Helper.swift */; };
-		715E62BD1F331250005895B0 /* ForecastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E62BC1F331250005895B0 /* ForecastMessage.swift */; };
 		717B60C11F08F93E00EA7D21 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B60C01F08F93E00EA7D21 /* Message.swift */; };
 		861C0A035107E7355203E469 /* Pods_WeatherWazoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D869DA54C1F20F7FE15895A3 /* Pods_WeatherWazoo.framework */; };
 		AE09C4301B9723DE00C7CCED /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09C42F1B9723DE00C7CCED /* LocationService.swift */; };
@@ -59,9 +57,7 @@
 		206D13C35A6180A5B8299E87 /* Pods_WeatherWazooTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherWazooTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B62FF85C4C5D8F7A85973AB /* Pods-WeatherWazoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherWazoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherWazoo/Pods-WeatherWazoo.debug.xcconfig"; sourceTree = "<group>"; };
 		618127CA5FD5525C0317F75C /* Pods-WeatherWazooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherWazooTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherWazooTests/Pods-WeatherWazooTests.debug.xcconfig"; sourceTree = "<group>"; };
-		715E62B61F32D27C005895B0 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		715E62BA1F32EFF8005895B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		715E62BC1F331250005895B0 /* ForecastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastMessage.swift; sourceTree = "<group>"; };
 		717B60C01F08F93E00EA7D21 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AA4310008581EE052D3F511D /* Pods-WeatherWazoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherWazoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherWazoo/Pods-WeatherWazoo.release.xcconfig"; sourceTree = "<group>"; };
 		AE09C42F1B9723DE00C7CCED /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 				AED4B2C01B876DF50003D765 /* ForecastView.swift */,
 				AEBE643A1B8D1F90004A0814 /* ForecastViewModel.swift */,
 				AEBE643D1B8D2108004A0814 /* Forecast.swift */,
-				715E62BC1F331250005895B0 /* ForecastMessage.swift */,
 			);
 			name = Forecast;
 			sourceTree = "<group>";
@@ -175,7 +170,6 @@
 				AEF61B2B1BA23C2A00E8F259 /* Models */,
 				AEBE64441B8D23B8004A0814 /* WeatherViewModel.swift */,
 				AECBA5E71B836BF20004A536 /* WeatherViewController.swift */,
-				715E62B61F32D27C005895B0 /* Notification.swift */,
 				AEF61B291BA23C0500E8F259 /* Services */,
 			);
 			name = Weather;
@@ -520,11 +514,9 @@
 				AEBE64451B8D23B8004A0814 /* WeatherViewModel.swift in Sources */,
 				AED4B2C21B876E8B0003D765 /* ForecastView.swift in Sources */,
 				EADFFD301CAEA22F008357FF /* TemperatureConverter.swift in Sources */,
-				715E62B71F32D27C005895B0 /* Notification.swift in Sources */,
 				AE09C4301B9723DE00C7CCED /* LocationService.swift in Sources */,
 				AEBE64431B8D2370004A0814 /* Weather.swift in Sources */,
 				AEBE643E1B8D2108004A0814 /* Forecast.swift in Sources */,
-				715E62BD1F331250005895B0 /* ForecastMessage.swift in Sources */,
 				CAB56F4267B3BC487990A92D /* OpenWeatherMapService.swift in Sources */,
 				AEEDF68D1B9F9B2900C6067B /* Temperature.swift in Sources */,
 				CAB565DDADB61DF9053BD50F /* WeatherServiceProtocol.swift in Sources */,

@@ -130,8 +130,8 @@ class WeatherViewController: UIViewController {
  //edit noticiation
         
         let notification = UNMutableNotificationContent()
-        notification.title = "Wake up smell the coffee! ☕️"
-        notification.body = "Current " + self.descriptionLabel.text! + " and "  + self.temperatureLabel.text! + ". " + self.messageLabel.text!
+        notification.title = "Good morning  ☕️  current \(self.descriptionLabel.text!) and \(self.temperatureLabel.text!)\u{00B0}"
+        notification.body = self.messageLabel.text!
         notification.sound = UNNotificationSound.default()
 /*create a timer for notification 5 seconds must be in background
         var dateInfo = DateComponents()

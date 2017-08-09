@@ -6,4 +6,5 @@ struct Forecast {
   let iconText: String
   let temperature: String
     let description: String
+    let id: String
 }
