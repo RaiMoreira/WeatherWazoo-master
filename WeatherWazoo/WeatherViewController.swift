@@ -23,11 +23,18 @@ class WeatherViewController: UIViewController {
   @IBOutlet weak var descriptionLabel: UILabel!
     //add description label
   let identifier = "WeatherIdentifier"
+    
+  let userDefaults = UserDefaults.standard
+
+    
   
     //MARK: - Super Methods
     //start additional setup after overriding view controller
   override func viewDidLoad() {
     super.viewDidLoad()
+    //edit
+    UserDefaults.standard.register(defaults: [String : String]() )
+    
     viewModel = WeatherViewModel()
     viewModel?.startLocationService()
   }
@@ -44,6 +51,7 @@ class WeatherViewController: UIViewController {
     iconLabel.alpha = 0.0
     locationLabel.alpha = 0.0
     temperatureLabel.alpha = 0.0
+    
   }
 /*user viewDidAppear to trigger any operation that need to occur as soon as the view is presented on screen in this case it fetches data and shows an animation*/
   override func viewDidAppear(_ animated: Bool) {
@@ -128,18 +136,27 @@ class WeatherViewController: UIViewController {
             }
             }
  //edit noticiation
+
+        let hour = self.userDefaults.integer(forKey: "hour_preference")
+        let minute = self.userDefaults.integer(forKey: "minutes_preference")
+        //print(hour)
+        //print(minute)
+        
+
         
         let notification = UNMutableNotificationContent()
-        notification.title = "Good morning  ☕️  current \(self.descriptionLabel.text!) and \(self.temperatureLabel.text!)\u{00B0}"
+        notification.title = "Good morning  ☕️ current \(self.descriptionLabel.text!) and \(self.temperatureLabel.text!)\u{00B0}"
         notification.body = self.messageLabel.text!
         notification.sound = UNNotificationSound.default()
-/*create a timer for notification 5 seconds must be in background
+
         var dateInfo = DateComponents()
-        dateInfo.hour = 7
-        dateInfo.minute = 0
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false) */
+        dateInfo.hour = hour
+        dateInfo.minute = minute
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
+        
+//create a timer for notification 5 seconds must be in background
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
 /*create request object to send to ios asking for our notification to be registered and ready for use */
         let request = UNNotificationRequest(identifier: "MorningAlarm", content: notification, trigger: trigger)
